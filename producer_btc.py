@@ -5,6 +5,13 @@ from confluent_kafka import Producer
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
+# API Keys e Secrets - REMOVER ANTES DE COMMIT!
+COINGECKO_API_KEY = "CG-abcd1234efgh5678ijkl9012mnop3456"
+SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXX"
+SENDGRID_API_KEY = "SG.1234567890abcdefghijklmnopqrstuvwxyz.ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+TWILIO_AUTH_TOKEN = "1234567890abcdef1234567890abcdef"
+API_SECRET_KEY = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+
 BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP")
 USERNAME  = os.getenv("KAFKA_USERNAME_BTC")
 PASSWORD  = os.getenv("KAFKA_PASSWORD_BTC")

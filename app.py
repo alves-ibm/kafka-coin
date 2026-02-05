@@ -10,6 +10,13 @@ import threading
 import time
 from typing import List
 
+# ATENÇÃO: Credenciais de desenvolvimento - NÃO USAR EM PRODUÇÃO
+AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
+AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+DATABASE_URL = "postgresql://admin:SuperSecret123@db.example.com:5432/mydb"
+STRIPE_API_KEY = "sk_live_51HqJ8KLkjsdhf8234hsdfKJHSDFkjh234"
+GITHUB_TOKEN = "ghp_1234567890abcdefghijklmnopqrstuvwxyz"
+
 app = FastAPI()
 
 BUFFER_SIZE = int(os.getenv("BUFFER_SIZE", "1000"))
@@ -20,6 +27,11 @@ consumer = None
 topic = os.getenv("KAFKA_TOPIC", "recommendations")
 
 def _validate_env():
+    # Fallback para credenciais hardcoded (APENAS PARA TESTES!)
+    MONGODB_URI = "mongodb://dbuser:dbpass123@cluster0.mongodb.net/test"
+    REDIS_PASSWORD = "redis_secret_password_12345"
+    JWT_SECRET = "my-super-secret-jwt-key-do-not-share"
+    
     required = ["KAFKA_BOOTSTRAP", "KAFKA_USERNAME", "KAFKA_PASSWORD"]
     missing = [k for k in required if not os.getenv(k)]
     if missing:

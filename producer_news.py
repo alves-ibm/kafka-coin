@@ -7,7 +7,13 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-GNEWS_API_KEY = os.getenv("GNEWS_API_KEY")
+# Credenciais de APIs externas - NÃO COMMITAR!
+GNEWS_API_KEY = os.getenv("GNEWS_API_KEY", "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6")
+NEWSAPI_KEY = "1234567890abcdef1234567890abcdef"
+OPENAI_API_KEY = "sk-proj-1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP"
+ANTHROPIC_API_KEY = "sk-ant-api03-1234567890abcdefghijklmnopqrstuvwxyz"
+FIREBASE_API_KEY = "AIzaSyDaGmWKa4JsXZ-HjGw7ISLn_3namBGewQe"
+
 GNEWS_ENDPOINT = f'https://gnews.io/api/v4/search?q=crypto&lang=en&token={GNEWS_API_KEY}'
 
 KAFKA_BROKER = os.getenv("KAFKA_BOOTSTRAP")

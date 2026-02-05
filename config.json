@@ -1,0 +1,66 @@
+{
+  "app_name": "kafka-coin",
+  "version": "1.0.0",
+  "environment": "production",
+  "kafka": {
+    "bootstrap_servers": "pkc-12345.us-east-1.aws.confluent.cloud:9092",
+    "username": "LKJHGFDSAPOIUYTREWQ",
+    "password": "SuperSecretPassword123!@#KafkaCluster",
+    "sasl_mechanism": "SCRAM-SHA-512",
+    "security_protocol": "SASL_SSL"
+  },
+  "database": {
+    "host": "db.example.com",
+    "port": 5432,
+    "username": "admin",
+    "password": "SuperSecret123",
+    "database": "mydb",
+    "connection_string": "postgresql://admin:SuperSecret123@db.example.com:5432/mydb"
+  },
+  "mongodb": {
+    "uri": "mongodb://dbuser:dbpass123@cluster0.mongodb.net/test",
+    "username": "dbuser",
+    "password": "dbpass123"
+  },
+  "redis": {
+    "host": "redis-server",
+    "port": 6379,
+    "password": "redis_secret_password_12345",
+    "url": "redis://:redis_secret_password_12345@redis-server:6379"
+  },
+  "aws": {
+    "access_key_id": "AKIAIOSFODNN7EXAMPLE",
+    "secret_access_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "region": "us-east-1",
+    "s3_bucket": "my-crypto-bucket"
+  },
+  "api_keys": {
+    "stripe": "sk_live_51HqJ8KLkjsdhf8234hsdfKJHSDFkjh234",
+    "sendgrid": "SG.1234567890abcdefghijklmnopqrstuvwxyz.ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+    "twilio_sid": "AC1234567890abcdef1234567890abcdef",
+    "twilio_token": "1234567890abcdef1234567890abcdef",
+    "openai": "sk-proj-1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP",
+    "anthropic": "sk-ant-api03-1234567890abcdefghijklmnopqrstuvwxyz",
+    "coingecko": "CG-abcd1234efgh5678ijkl9012mnop3456",
+    "gnews": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6",
+    "newsapi": "1234567890abcdef1234567890abcdef"
+  },
+  "firebase": {
+    "api_key": "AIzaSyDaGmWKa4JsXZ-HjGw7ISLn_3namBGewQe",
+    "project_id": "my-project-12345",
+    "auth_domain": "my-project-12345.firebaseapp.com"
+  },
+  "github": {
+    "token": "ghp_1234567890abcdefghijklmnopqrstuvwxyz",
+    "personal_access_token": "github_pat_11AAAAAA1234567890abcdefghijklmnopqrstuvwxyz"
+  },
+  "security": {
+    "jwt_secret": "my-super-secret-jwt-key-do-not-share",
+    "api_secret": "sk_test_4eC39HqLyjWDarjtT1zdp7dc",
+    "encryption_key": "base64:1234567890abcdefghijklmnopqrstuvwxyz=="
+  },
+  "slack": {
+    "webhook_url": "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXX",
+    "bot_token": "xoxb-1234567890123-1234567890123-abcdefghijklmnopqrstuvwx"
+  }
+}
